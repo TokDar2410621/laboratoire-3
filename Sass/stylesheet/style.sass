@@ -1,0 +1,119 @@
+// Palette de couleurs - https://colorhunt.co/palette/222831393e4600adb5eeeeee
+$dark-blue: #222831
+$dark-gray: #393E46
+$primary: #00ADB5
+$light-gray: #EEEEEE
+
+// Override Bootstrap primary avant l'import
+$theme-colors: ("primary": $primary)
+
+@import "../../node_modules/bootstrap/scss/bootstrap"
+
+// Polices Google Fonts - Open Sans pour le contenu
+body
+    font-family: 'Open Sans', sans-serif
+    background-color: $dark-blue
+    color: $light-gray
+
+// Lora pour les titres
+h1, h2, h3, h4, h5, h6, .navbar-brand
+    font-family: 'Lora', serif
+
+// Fond dark charcoal
+.bg-light
+    background-color: $dark-blue !important
+
+// Header et footer - dark gray pour contraste
+header, footer
+    background-color: $dark-gray !important
+    border-color: $primary !important
+
+    .nav-link, .navbar-brand, p, a, i
+        color: $light-gray !important
+
+    .nav-link:hover
+        color: $primary !important
+
+    .navbar-toggler
+        border-color: $dark-gray !important
+
+    .navbar-toggler-icon
+        filter: invert(1)
+
+// Cartes - dark gray
+.card
+    background-color: $dark-gray
+    border-color: $dark-gray !important
+
+    .card-header
+        background-color: $primary
+
+    .card-body
+        background-color: $dark-gray
+
+    .card-title
+        color: $light-gray
+
+    .card-text
+        color: $light-gray
+
+    a.stretched-link
+        color: $primary
+
+// Formulaires
+.form-control, .form-select, .input-group-text
+    background-color: $dark-gray !important
+    border-color: $light-gray !important
+    color: $light-gray !important
+
+.form-control:focus, .form-select:focus
+    border-color: $primary !important
+    box-shadow: 0 0 0 0.2rem rgba(0, 173, 181, 0.25)
+
+.form-control::placeholder, textarea::placeholder
+    color: rgba(238, 238, 238, 0.5) !important
+
+// Boutons primaires
+.btn-primary
+    background-color: $primary
+    border-color: $primary
+    color: $dark-blue
+    font-weight: 700
+    &:hover, &:focus, &:active
+        background-color: darken($primary, 10%)
+        border-color: darken($primary, 10%)
+
+// Titres de page
+h1.display-4, h1.display-5
+    color: $light-gray
+
+// Section commentaires
+.comments-list
+    .d-flex
+        border-bottom: 1px solid $dark-gray
+        padding-bottom: 1rem
+
+    i
+        color: $primary !important
+
+// Formulaire commentaire / ajout
+form.border
+    border-color: $dark-gray !important
+    background-color: $dark-gray
+
+// Barre de recherche
+.input-group-text
+    background-color: $dark-gray !important
+
+// Labels
+.form-label
+    color: $light-gray
+
+// Select options
+select option
+    background-color: $dark-gray
+    color: $light-gray
+
+// Texte général
+.fw-bold, label
+    color: $light-gray

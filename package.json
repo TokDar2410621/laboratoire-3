@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "cypress": "^15.13.0",
+    "http-server": "^14.1.1",
+    "jquery": "^3.7.1",
+    "jquery-ui-dist": "^1.13.3",
+    "json-server": "^0.17.3"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.31",
+    "@types/jqueryui": "^1.12.23",
+    "typescript": "^5.7.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "api": "npx json-server --watch db.json --port 3000",
+    "dev": "npx http-server -p 8080",
+    "cypress": "npx cypress open"
+  }
+}
